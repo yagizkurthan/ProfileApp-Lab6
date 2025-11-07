@@ -1,11 +1,29 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import ProfileCard from './components/ProfileCard';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text>My Profile App</Text>
+        <Text style={styles.title}>My Profile App</Text>
+        <ScrollView>
+          <ProfileCard 
+            name="Ada Lovelace" 
+            role="Mathematician" 
+            imageSource={require('./assets/person1.jpg')} 
+          />
+          <ProfileCard 
+            name="Grace Hopper" 
+            role="Computer Scientist" 
+            imageSource={require('./assets/person2.jpg')} 
+          />
+          <ProfileCard 
+            name="Hedy Lamarr" 
+            role="Inventor & Actress" 
+            imageSource={require('./assets/person3.jpg')} 
+          />
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
@@ -18,5 +36,10 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
   },
 });
