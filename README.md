@@ -1,7 +1,7 @@
 # Profile Card App
 
-**Student ID:** [Your Student ID Here]  
-**Name:** [Your Name Here]
+**Student ID:** [220408011]  
+**Name:** [M. Yağız Kurthan]
 
 ## Project Description
 
